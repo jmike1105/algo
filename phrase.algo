@@ -1,0 +1,30 @@
+ALGORITHM phrase
+VAR
+    phrase : VAR;
+    caractere : carctere;
+    longueur, nombremot, nombrevoy : INTEGER;
+BEGIN
+    phrase <- " "
+    caractere<- lirecaractere()
+    longueur<- 0
+    nombremot<- 0
+    nombrevoy <- 0
+
+    WHILE (carctere!=".") DO
+        phrase<- phrase + caractere
+        IF (carctere" ") THEN
+            nombremot <- nombremot + 1
+        ELSE 
+            IF (nombrevoy est une voyelle ) THEN
+                nombrevoy <- nombrevoy + 1
+            END_IF
+        END_IF
+        longueur <- longueur + 1
+        carctere <- lirecaractere()
+    END_WHILE
+    nombremot <- nombremot + 1
+
+    write"Afficher le nombre de mot :",nombremot
+    write"Afficher la longueur :",longueur
+    write"Afficher le nombre de voyelle :",nombrevoy
+END
